@@ -1,6 +1,7 @@
 
 
 class Player
+    attr_reader :name
     def initialize(name, playletter='X')
         @name = name
         @playletter = playletter
@@ -16,6 +17,7 @@ class Player
         game.showArray #2code
         @playRecord << selectedBox
         p @playRecord
+        #print "won ? = #{self.checkWInner?(@playRecord)}\n"
         return self.checkWInner?(@playRecord)
 
     end
@@ -23,15 +25,18 @@ class Player
     def checkWInner?(playRecord)
         #if @playRecord in winnerModule return winner
         if (@playRecord.length < 3)
-            puts 'false'
             return false  
         else
             winnerFormulas = ['123', '456', '789', '147', '258', '369', '159', '357']
             playedPositions = playRecord.sort.join('')
 
+            foundWinner = false
             winnerFormulas.each do |win|
-                return playedPositions.include?(win)
+                #print "\n played #{playedPositions} : checking with"
+                foundWinner =  playedPositions.include?(win)
+                return true if (foundWinner==true)
             end
+            return false
             
         end
     end
