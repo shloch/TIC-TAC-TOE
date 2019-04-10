@@ -2,7 +2,7 @@
 Practicing Ruby (Object Oriented Programming) by Building TIC TAC TOE GAME
 Inspired by explanations from https://www.youtube.com/watch?v=mMO-spo20jU
 
-# DESCRIPTION
+#£ DESCRIPTION
 
 There're 2 main directories hosting the game files
 - **lib**/ : for the game logic
