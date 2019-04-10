@@ -1,7 +1,7 @@
 
-require('./player')
-require('./gameclass')
-require('./winnerModule')
+require('./lib/player')
+require('./lib/gameclass')
+require('./lib/winnerModule')
 
 newGame = Game.new
 newGame.showArray

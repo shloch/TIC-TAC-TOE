@@ -27,7 +27,7 @@ class Player
         if (@playRecord.length < 3)
             return false  
         else
-            winnerFormulas = ['123', '456', '789', '147', '258', '369', '159', '357']
+            winnerFormulas = Winner.winningFormulas
             playedPositions = playRecord.sort.join('')
 
             foundWinner = false
