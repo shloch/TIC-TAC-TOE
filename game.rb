@@ -1,13 +1,30 @@
 
-require('./lib/player')
-require('./lib/gameclass')
-require('./lib/winnerModule')
+$LOAD_PATH.unshift("./lib")
+require "winnermodule"
+require "gameclass"
+require "player"
+
 
 newGame = Game.new
-newGame.showArray
 
-player1 = Player.new('shloch', 'X')
-player2 = Player.new('Bella', 'O')
+#=======================================
+#            GAME BEGINS HERE
+#=======================================
+
+puts "============================================"
+puts "  WELCOME TO MY TIC - TAC - TOE   "
+puts "============================================"
+print "PLAYER 1 ('X') CHOOSE NAME : "
+name1 = gets.chomp
+
+print "PLAYER 2 ('O') CHOOSE NAME: "
+name2 = gets.chomp
+
+player1 = Player.new(name1, 'X')
+player2 = Player.new(name2, 'O')
+
+
+newGame.showArray
 
 
 playCount=0
@@ -18,7 +35,7 @@ while playCount<9 do
         break
     end
     playCount += 1
-    print "n playcount===> #{playCount} \n"
+    #print " playcount===> #{playCount} \n"
 
     if playCount == 9
         puts "....DRAW GAME ....." 
@@ -32,10 +49,7 @@ while playCount<9 do
     end
     playCount += 1
 
-   
-    
-    
-    print "playcount===> #{playCount} \n"
+
 end
 
 print "\n  GAME OVER !! \n"
