@@ -1,5 +1,6 @@
 # TIC-TAC-TOE
-Practicing Ruby (Object Oriented Programming) by Building TIC TAC TOE GAME
+Practicing Ruby (Object Oriented Programming) by Building TIC TAC TOE GAME.
+
 Inspired by explanations from https://www.youtube.com/watch?v=mMO-spo20jU
 
 ## DESCRIPTION
