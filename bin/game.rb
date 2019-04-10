@@ -1,5 +1,5 @@
 
-$LOAD_PATH.unshift("./lib")
+$LOAD_PATH.unshift("../lib")
 require "winnermodule"
 require "gameclass"
 require "player"

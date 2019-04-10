@@ -12,7 +12,7 @@ class Player
         
         availableNumber = false 
         while (availableNumber == false)
-            print "Choose empty square '#{@name}': "
+            print "Choose available square '#{@name.upcase}': "
             selectedBox = gets.chomp
             if (game.numberBetween_1_9?(selectedBox.to_i))
                 if (!game.numberAlreadyChosen?(selectedBox.to_i))
