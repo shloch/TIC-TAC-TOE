@@ -1,7 +1,8 @@
+require 'colorize'
 
 class Player
     include Winnermodule
-    attr_reader :name
+    attr_reader :name, :playletter
     def initialize(name, playletter='X')
         @name = name
         @playletter = playletter
@@ -12,7 +13,7 @@ class Player
         
         availableNumber = false 
         while (availableNumber == false)
-            print "Choose available square '#{@name.upcase}': "
+            print "Choose available square '#{@name.upcase.yellow}': "
             selectedBox = gets.chomp
             if (game.numberBetween_1_9?(selectedBox.to_i))
                 if (!game.numberAlreadyChosen?(selectedBox.to_i))
@@ -49,7 +50,7 @@ class Player
             winnerFormulas.each do |win|
                 #print "\n played #{playedPositions} : checking with"
                 foundWinner =  playedPositions.include?(win)
-                return true if (foundWinner==true)
+                return true if (foundWinner)
             end
             return false
             
