@@ -1,4 +1,5 @@
 require 'colorize'
+require '../lib/winnermodule.rb'
 # The class to handle Player actions
 class Player
   include Winnermodule
@@ -34,13 +35,13 @@ class Player
     @player.check_winner?(@play_record)
   end
 
-  def check_winner?(playrecord)
+  def check_winner?(play_record)
     #if @play_record in winnerModule return winner
-    if @play_record.length < 3
+    if play_record.length < 3
       false
     else
       winner_formulas = @player.winning_formulas
-      played_positions = playrecord.sort
+      played_positions = play_record.sort
       found_winner = false
       winner_formulas.each do |win|
         # print '\n played #{played_positions} : checking with'

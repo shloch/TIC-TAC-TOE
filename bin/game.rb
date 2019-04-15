@@ -20,7 +20,7 @@ name2 = gets.chomp
 
 player1 = Player.new(name1, 'X')
 player2 = Player.new(name2, 'O')
-
+puts new_game.access_array
 new_game.showArray
 
 play_count = 0
