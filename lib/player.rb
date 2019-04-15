@@ -1,59 +1,57 @@
 require 'colorize'
-
+# The class to handle Player actions
 class Player
-    include Winnermodule
-    attr_reader :name, :playletter
-    def initialize(name, playletter='X')
-        @name = name
-        @playletter = playletter
-        @playRecord = []
-    end
+  include Winnermodule
+  attr_reader :name, :playletter
 
-    def play(game)
-        
-        availableNumber = false 
-        while (availableNumber == false)
-            print "Choose available square '#{@name.upcase.yellow}': "
-            selectedBox = gets.chomp
-            if (game.numberBetween_1_9?(selectedBox.to_i))
-                if (!game.numberAlreadyChosen?(selectedBox.to_i))
-                    availableNumber = true
-                else
-                    game.alread_selected_warning
-                end                  
-            else
-                game.correct_number_warning
-            end
-        end
-        
-       
-        game.fillArray(@playletter, selectedBox.to_i) #2code
-        game.showArray #2code
-        @playRecord << selectedBox
-        #print "won ? = #{self.checkWInner?(@playRecord)}\n"
-        return self.checkWInner?(@playRecord)
+  def initialize(name, playletter = 'X')
+    @player = self
+    @name = name
+    @play_letter = playletter
+    @play_record = []
+  end
 
-    end
-
-
-
-    def checkWInner?(playRecord)
-        #if @playRecord in winnerModule return winner
-        if (@playRecord.length < 3)
-            return false  
+  def play(game)
+    available_number = false
+    while available_number == false
+      print "Choose available square #{@name.upcase.yellow}: "
+      selected_box = gets.chomp
+      if game.numberBetween_1_9? selected_box.to_i
+        if !game.numberAlreadyChosen? selected_box.to_i
+          available_number = true
         else
-            
-            winnerFormulas = self.winningFormulas
-            playedPositions = playRecord.sort.join('')
-
-            foundWinner = false
-            winnerFormulas.each do |win|
-                #print "\n played #{playedPositions} : checking with"
-                foundWinner =  playedPositions.include?(win)
-                return true if (foundWinner)
-            end
-            return false
-            
+          game.alread_selected_warning
         end
+      else
+        game.correct_number_warning
+      end
     end
+
+    game.fillArray(@play_letter, selected_box.to_i)
+    game.showArray
+    @play_record << selected_box
+    # print 'won ? = # {player.check_winner?(@play_record)}\n'
+    @player.check_winner?(@play_record)
+  end
+
+  def check_winner?(playrecord)
+    #if @play_record in winnerModule return winner
+    if @play_record.length < 3
+      false
+    else
+      winner_formulas = @player.winning_formulas
+      played_positions = playrecord.sort
+      found_winner = false
+      winner_formulas.each do |win|
+        # print '\n played #{played_positions} : checking with'
+        count = 0
+        win_chars = win.split('')
+        win_chars.each do |num|
+          count += 1 if played_positions.include?(num)
+        end
+        found_winner = true if count == 3
+      end
+      found_winner
+    end
+  end
 end
