@@ -48,13 +48,13 @@ class Player
     found_winner
   end
 
-  def check_winner?(playrecord)
+  def check_winner?(play_record)
     #if @play_record in winnerModule return winner
     if play_record.length < 3
       false
     else
       winner_formulas = ["123", "456", "789", "147", "258", "369", "159", "357"]
-      played_positions = playrecord.sort
+      played_positions = play_record.sort
       check_played_combination(winner_formulas, played_positions)
     end
   end
