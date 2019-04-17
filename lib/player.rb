@@ -2,7 +2,7 @@ require "colorize"
 # The class to handle Player actions
 class Player
   attr_reader :name, :playletter, :play_record
-
+  attr_writer :play_record
   def initialize(name, playletter = "X")
     @player = self
     @name = name
