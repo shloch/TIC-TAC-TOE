@@ -13,6 +13,14 @@ class GameMessage
     puts "This position is already selected:"
   end
 
+  def announce_winner(player = nil)
+    if player.nil?
+      puts "....DRAW GAME ....." 
+    else
+      puts "........ #{player.name.upcase}  WON....... !!"
+    end
+  end
+
   def game_over
     msg = "game over!!!"
 
@@ -24,4 +32,5 @@ class GameMessage
     end
     puts msg.yellow
   end
+
 end

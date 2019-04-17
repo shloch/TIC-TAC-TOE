@@ -11,21 +11,17 @@ class GamePlay
     while play_count < 9
       win = @player1.play(@game, @messages)
       if win == true
-        puts "........ #{@player1.name.upcase}  WON....... !!"
-        break
+        @messages.announce_winner(@player1);break
       end
       play_count += 1
-      # print ' play_count===> #{play_count} \n'
-
+      
       if play_count == 9
-        puts "....DRAW GAME ....."
-        break
+        @messages.announce_winner;break
       end
 
       win = @player2.play(@game, @messages)
       if win == true
-        puts "........ #{@player2.name.upcase}  WON....... !!"
-        break
+        @messages.announce_winner(@player2);break
       end
       play_count += 1
     end

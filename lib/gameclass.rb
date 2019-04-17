@@ -30,4 +30,24 @@ class Game
   def numberBetween_1_9?(number)
     (number >= 1 && number <= 9) ? true : false
   end
+
+  def check_winner?(player)
+    if player.play_record.length < 3
+      false
+    else
+      winner_formulas = ["123", "456", "789", "147", "258", "369", "159", "357"]
+      check_player_combination(winner_formulas, player.play_record.sort)
+    end
+  end
+
+  def check_player_combination(winner_formulas, played_positions)
+    found_winner = false
+    winner_formulas.each do |win|
+      count = 0
+      win_chars = win.split("")
+      win_chars.each {|num|count += 1 if played_positions.include?(num)}
+      found_winner = true if count == 3
+    end
+    found_winner
+  end
 end
