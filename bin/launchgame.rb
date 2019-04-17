@@ -23,4 +23,4 @@ player2 = Player.new(name2, 'O')
 new_game.showArray
 play_game = GamePlay.new(player1, player2, new_game, game_message)
 play_game.play
-print game_message.game_over
+game_message.game_over
