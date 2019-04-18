@@ -2,7 +2,7 @@ $LOAD_PATH.unshift('../lib')
 require 'gamemessage'
 require 'gameclass'
 require 'player'
-require 'game'
+require 'playgame'
 
 new_game = Game.new
 game_message = GameMessage.new
@@ -22,5 +22,5 @@ player2 = Player.new(name2, 'O')
 
 new_game.showArray
 play_game = GamePlay.new(player1, player2, new_game, game_message)
-play_game.play
+play_game.loop_play
 game_message.game_over
