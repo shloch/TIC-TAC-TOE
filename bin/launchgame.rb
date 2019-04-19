@@ -1,6 +1,6 @@
 $LOAD_PATH.unshift('../lib')
-require 'gamemessage'
-require 'gameclass'
+require 'messages'
+require 'board'
 require 'player'
 require 'playgame'
 
