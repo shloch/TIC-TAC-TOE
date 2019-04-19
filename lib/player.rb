@@ -24,8 +24,8 @@ class Player
     selected_box = ''
     while available_number == false
       selected_box = user_input
-      if game.numberBetween_1_9? selected_box.to_i
-        !game.numberAlreadyChosen?(selected_box.to_i) ? available_number = true : message.alread_selected_warning
+      if game.number_between_1_9? selected_box.to_i
+        !game.number_already_chosen?(selected_box.to_i) ? available_number = true : message.alread_selected_warning
       else
         message.correct_number_warning
       end
