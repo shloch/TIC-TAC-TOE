@@ -1,9 +1,9 @@
-require "colorize"
+require 'colorize'
 # The class to handle Player actions
 class Player
-  attr_reader :name, :playletter, :play_record
-  attr_writer :play_record
-  def initialize(name, playletter = "X")
+  attr_reader :name, :play_letter, :play_record
+
+  def initialize(name, playletter = 'X')
     @player = self
     @name = name
     @play_letter = playletter
@@ -13,26 +13,24 @@ class Player
   def user_input
     print "Choose available square #{@name.upcase.yellow}: "
     selected_box = gets.chomp
+    selected_box
   end
 
   def update_play_record(selected_box)
     @play_record << selected_box
   end
-  
-  def play(game, message)
-    available_number = false; selected_box = " "
+
+  def select_box(game, message)
+    available_number = false
+    selected_box = ''
     while available_number == false
       selected_box = user_input
       if game.numberBetween_1_9? selected_box.to_i
-        !game.numberAlreadyChosen?(selected_box.to_i) ? available_number = true :
-          message.alread_selected_warning
+        !game.numberAlreadyChosen?(selected_box.to_i) ? available_number = true : message.alread_selected_warning
       else
         message.correct_number_warning
       end
     end
-    game.fillArray(@play_letter, selected_box.to_i)
-    game.showArray
-    update_play_record(selected_box)
-    game.check_winner?(@player)
+    selected_box
   end
 end

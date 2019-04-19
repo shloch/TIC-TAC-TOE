@@ -1,11 +1,10 @@
+# The class to handle board actions
 class Game
-
   def initialize
     @filling_array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   end
    
-
-  def fillArray(playletter, selectedBox)
+  def fill_array(playletter, selectedBox)
     @filling_array[selectedBox - 1] = playletter
   end
 
@@ -16,15 +15,15 @@ class Game
   def showArray
     puts
     puts "#{@filling_array[0]} | #{@filling_array[1]} | #{@filling_array[2]}"
-    puts ""
+    puts
     puts "#{@filling_array[3]} | #{@filling_array[4]} | #{@filling_array[5]}"
-    puts ""
+    puts
     puts "#{@filling_array[6]} | #{@filling_array[7]} | #{@filling_array[8]}"
     puts
   end
 
   def numberAlreadyChosen?(selectedBox)
-    (@filling_array[selectedBox - 1] == "X" || @filling_array[selectedBox - 1] == "O") ? true : false
+    (@filling_array[selectedBox - 1] == 'X' || @filling_array[selectedBox - 1] == 'O') ? true : false
   end
 
   def numberBetween_1_9?(number)
@@ -35,7 +34,7 @@ class Game
     if player.play_record.length < 3
       false
     else
-      winner_formulas = ["123", "456", "789", "147", "258", "369", "159", "357"]
+      winner_formulas = ['123', '456', '789', '147', '258', '369', '159', '357']
       check_player_combination(winner_formulas, player.play_record.sort)
     end
   end
@@ -44,7 +43,7 @@ class Game
     found_winner = false
     winner_formulas.each do |win|
       count = 0
-      win_chars = win.split("")
+      win_chars = win.split('')
       win_chars.each {|num|count += 1 if played_positions.include?(num)}
       found_winner = true if count == 3
     end
