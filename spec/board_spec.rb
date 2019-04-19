@@ -1,4 +1,4 @@
-require './lib/gameclass.rb'
+require './lib/board.rb'
 require './lib/player.rb'
 
 describe Game do
@@ -9,19 +9,19 @@ describe Game do
 
   describe "#check_winner?" do
     it "Should return false for an empty selection" do
-      @player.play_record = []
+      @player.instance_variable_set(:@play_record, [])
       expect(@game.check_winner?(@player)).to be_falsey
     end
 
     it "Should return true with three matching plays" do
-      @player.play_record = ['1', '5', '7', '9']
+      @player.instance_variable_set(:@play_record, ['1', '5', '7', '9'])
       expect(@game.check_winner?(@player)).to be_truthy
     end
   end
 
   describe "#fillArray" do
     it "Should return an array with provide value" do
-      expect(@game.fillArray('X',5)).to eq('X')
+      expect(@game.fill_array('X',5)).to eq('X')
     end
   end
 
@@ -37,12 +37,12 @@ describe Game do
 
   describe "#numberAlreadyChosen?" do
     it "Should return true if number was chosen" do
-      @game.fillArray('X',5)
+      @game.fill_array('X',5)
       expect(@game.numberAlreadyChosen?(5)).to be_truthy
     end
 
     it "Should return false if number not chosen" do
-      @game.fillArray('X',5)
+      @game.fill_array('X',5)
       expect(@game.numberAlreadyChosen?(6)).to be_falsey
     end
   end
