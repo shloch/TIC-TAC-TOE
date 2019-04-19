@@ -8,7 +8,7 @@ class GamePlay
 
   def player_turn(player)
     selected_box = player.select_box(@game, @messages)
-    @game.fillArray(player.play_letter, selected_box.to_i)
+    @game.fill_array(player.play_letter, selected_box.to_i)
     @game.showArray
     player.update_play_record(selected_box)
 
