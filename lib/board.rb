@@ -43,7 +43,7 @@ class Game
     found_winner = false
     winner_formulas.each do |win|
       count = 0
-      win_chars = win.split(')
+      win_chars = win.split('')
       win_chars.each {|num|count += 1 if played_positions.include?(num)}
       found_winner = true if count == 3
     end
