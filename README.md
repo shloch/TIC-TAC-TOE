@@ -40,3 +40,9 @@ The " **bin**/ " folder contains one file :
 1. **launchgame.rb** : This is the main game file (the executable), from which the game is launched. It loads all the files in the *lib/* folder.
 
 
+
+## Contributors
+
+- Louis SHEY _https://github.com/shloch_
+- Fabien RAPHAEL _https://github.com/Oghenebrume50__
+
