@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # The class to handle board actions
 class Game
   def initialize

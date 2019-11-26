@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # The class to handle game execution actions
 class GamePlay
   def initialize(player1, player2, game, messages)
