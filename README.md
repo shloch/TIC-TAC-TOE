@@ -1,9 +1,8 @@
-# TIC-TAC-TOE
+<h1 align="center"> TIC-TAC-TOE GAME </h1>
 Practicing Ruby (Object Oriented Programming) by Building TIC TAC TOE GAME.
 
 Inspired by explanations from https://www.youtube.com/watch?v=mMO-spo20jU
 
-<h1 align="center">Twitter-design-clone</h1>
 <p>
             Developed by <br />
             @shloch and @raphael_noriode  <br />
