@@ -3,6 +3,23 @@ Practicing Ruby (Object Oriented Programming) by Building TIC TAC TOE GAME.
 
 Inspired by explanations from https://www.youtube.com/watch?v=mMO-spo20jU
 
+<h1 align="center">Twitter-design-clone</h1>
+<p>
+            Developed by <br />
+            @shloch and @raphael_noriode  <br />
+            <a href="https://twitter.com/shloch" target="_blank">
+                <img alt="Twitter: @shloch" src="https://img.shields.io/twitter/follow/shloch.svg?style=social" />
+            </a> <br/>
+             <a href="https://twitter.com/raphael_noriode" target="_blank">
+                <img alt="Twitter: @raphael_noriode"
+                    src="https://img.shields.io/twitter/follow/raphael_noriode.svg?style=social" />
+            </a>
+
+            
+
+           
+</p>
+
 ## DESCRIPTION
 
 There're 2 main directories hosting the game files
@@ -44,5 +61,5 @@ The " **bin**/ " folder contains one file :
 ## Contributors
 
 - Louis SHEY _https://github.com/shloch_
-- Fabien RAPHAEL _https://github.com/Oghenebrume50__
+- Raphael Noriode _https://github.com/Oghenebrume50__
 
