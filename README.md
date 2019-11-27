@@ -53,9 +53,13 @@ The " **lib**/ " is made of the following files :
 
 The " **bin**/ " folder contains one file :
 
-1. **launchgame.rb** : This is the main game file (the executable), from which the game is launched. It loads all the files in the *lib/* folder.
+1. **launchgame.rb** : This is the main game file (the executable), from which the game is launched. It loads all the files in the *lib/* folder. 
 
 
+## Launching game 
+open terminal and type the following
+- `cd bin/`
+- `ruby launchgame.rb`
 
 ## Contributors
 
