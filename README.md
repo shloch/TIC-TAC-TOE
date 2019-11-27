@@ -19,6 +19,14 @@ Inspired by explanations from https://www.youtube.com/watch?v=mMO-spo20jU
            
 </p>
 
+
+
+## Launching game 
+open terminal and type the following
+- `cd bin/`
+- `ruby launchgame.rb`
+
+
 ## DESCRIPTION
 
 There're 2 main directories hosting the game files
@@ -55,11 +63,6 @@ The " **bin**/ " folder contains one file :
 
 1. **launchgame.rb** : This is the main game file (the executable), from which the game is launched. It loads all the files in the *lib/* folder. 
 
-
-## Launching game 
-open terminal and type the following
-- `cd bin/`
-- `ruby launchgame.rb`
 
 ## Contributors
 
