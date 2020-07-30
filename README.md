@@ -26,6 +26,8 @@ open terminal and type the following
 - `cd bin/`
 - `ruby launchgame.rb`
 
+![alt text](https://github.com/shloch/RESTAURANT_PAGE/blob/master/dist/assets/restaurant.gif)
+
 
 ## DESCRIPTION
 
@@ -66,6 +68,14 @@ The " **bin**/ " folder contains one file :
 
 ## Contributors
 
-- Louis SHEY _https://github.com/shloch_
-- Raphael Noriode _https://github.com/Oghenebrume50__
+### 👤 **SHEY Louis CHIA**
+
+- Github: [shloch](https://github.com/shloch)
+- Twitter: [@shloch](https://twitter.com/shloch)
+- Linkedin: [/in/shey-louis-chia](https://www.linkedin.com/in/shey-louis-chia)
+- Email: shloch2007@yahoo.fr
+
+### 👤 **Raphael Noriode**
+- Github: _https://github.com/Oghenebrume50__
+- Twitter: https://mobile.twitter.com/raphael_noriode
 
