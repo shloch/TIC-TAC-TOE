@@ -26,7 +26,7 @@ open terminal and type the following
 - `cd bin/`
 - `ruby launchgame.rb`
 
-![alt text](https://github.com/shloch/RESTAURANT_PAGE/blob/master/dist/assets/restaurant.gif)
+![alt text](https://github.com/shloch/TIC-TAC-TOE/blob/master/tic.gif)
 
 
 ## DESCRIPTION
