@@ -79,3 +79,7 @@ The " **bin**/ " folder contains one file :
 - Github: _https://github.com/Oghenebrume50__
 - Twitter: https://mobile.twitter.com/raphael_noriode
 
+## Acknowledgements
+- https://www.ruby-lang.org/en/
+- https://www.youtube.com/watch?v=mMO-spo20jU
+
